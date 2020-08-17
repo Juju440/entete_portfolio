@@ -1,0 +1,98 @@
+body {
+    background-color: rgb(131,58,180);
+    margin:0;
+    padding: 0;
+    background: url(https://zupimages.net/up/17/27/5rft.png) no-repeat;
+    background-size: cover;
+    image-rendering: auto;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.menu {
+    overflow: hidden;
+    background-color: rgb(2,0,36);
+    text-align: center;
+
+    list-style-type: none; /*enlever les puces*/
+}
+
+.menu a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu ul {
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+}
+
+.menu ul li {
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.menu a:hover, .menu:hover {
+    color: black;
+}
+
+.active, .menu ul li:hover {
+    background: #c72c48;
+    border-radius: 5px;
+}
+
+.menu, .fa {
+    margin-right: 8px;
+}
+
+.sous_menu_1 {
+    display: none;
+}
+
+.menu ul li:hover .sous_menu_1 {
+    display: block;
+    position: absolute;
+    background: rgb(131,58,180);
+    margin-top: 15px;
+    margin-left: -15px;
+}
+
+.menu ul li:hover .sous_menu_1 ul {
+    display: block;
+    margin: 10px;
+}
+
+.menu ul li:hover .sous_menu_1 li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu ul li:hover .sous_menu_1 ul li:last-child {
+    border-bottom: none;
+}
+
+.menu ul li:hover .sous_menu_1 ul li a:hover {
+    color: #b2ff00;
+}
+
+
+
+/* Styles spécifiques pour l'écran du Huawei P30 Lite */
+@media screen and (min-width: 1080px) {
+    .conteneur-flex {
+        flex-flow: row wrap;
+    }
+
+    .sous-conteneur-flex {
+        margin: 0px 10px;
+    }
+}
